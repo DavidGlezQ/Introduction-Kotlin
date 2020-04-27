@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Section4Kotlin</string>
+    <string name="btn_to_cycle">1.-To Life Cycle Events</string>
+    <string name="btn_to_click">2.-To Click Events</string>
+    <string name="btn_to_android_extension">3.-To Android Kotlin Extension</string>
+    <string name="btn_to_picasso">4.-To Picasso</string>
+    <string name="btn_to_ListView">5.-To List View</string>
+    <string name="btn_to_intents">6.-To Intents</string>
+    <string name="btn_to_permission">7.-To Permission</string>
+    <string name="btn_to_shared_preferences">8.-To Shared Preferences</string>
+    <string name="btn_to_functions">9.-To Extension Functions</string>
+    <string name="btn_click_xml">Click By XML</string>
+    <string name="btn_in_line">Click In Line</string>
+    <string name="btn_multi_1">Multiple Buttons 1</string>
+    <string name="btn_multi_2">Multiple Buttons 2</string>
+    <string name="btn_multi_3">Multiple Buttons 3</string>
+    <string name="btn_kat_id">Button By FindViewById</string>
+    <string name="btn_kat_kat">Button By Kat</string>
+    <string name="btn_intent_extra">Intent with Extra</string>
+    <string name="btn_intent_flags">Intent with lags</string>
+    <string name="btn_intent_objects">Intent with Objects</string>
+    <string name="btn_back">Go Back</string>
+</resources>
