@@ -7,6 +7,7 @@ import android.view.View
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_intent_extras.*
 import kotlinx.android.synthetic.main.list_view_person.textViewName
+import models.Student
 
 class IntentExtrasActivity : AppCompatActivity() {
 
@@ -16,10 +17,30 @@ class IntentExtrasActivity : AppCompatActivity() {
         //Evento para boton regresar en una sola linea.
         btn_back.setOnClickListener { startActivity(Intent(this, IntentsActivity::class.java)) }
 
-        getIntentExtrasFromPreviousActivity()
+        val isExtraSet = setIntentExtrasFromPreviousActivity()
+
+        val isParcelableSet = setParcelableFromPreviousActivity()
+
+        if (!isExtraSet && !isParcelableSet){
+            checkBoxDeveloper.visibility = View.INVISIBLE
+        }
     }
 
-    private fun getIntentExtrasFromPreviousActivity(){
+    private fun setParcelableFromPreviousActivity(): Boolean{
+        //Se llama con le key que le pusimos antes "student"
+        val student = intent.getParcelableExtra<Student>("student")
+        student?.let{
+            textViewName.text = student.name
+            textViewLastName.text = student.lastName
+            textViewAge.text = "${student.age}"
+            checkBoxDeveloper.text = "Developer"
+            checkBoxDeveloper.isChecked = student.isDeveloper
+            return true
+        }
+        return false
+    }
+
+    private fun setIntentExtrasFromPreviousActivity(): Boolean{
         //Recoger los datos del IntentExtra. Ese name es una key es decir que se le dice que valor es el que recogera.
         val name: String? = intent.getStringExtra("name")
         val lastName: String? = intent.getStringExtra("lastName")
@@ -33,8 +54,8 @@ class IntentExtrasActivity : AppCompatActivity() {
             textViewAge.text = "$age"
             checkBoxDeveloper.text = "Developer"
             checkBoxDeveloper.isChecked = developer
-        }else{//Este else es para ocultar el checkBox en caso de que no tenga ningun valor.
-            checkBoxDeveloper.visibility = View.INVISIBLE
+            return true
         }
+        return false
     }
 }

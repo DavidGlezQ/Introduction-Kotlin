@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_intents.*
+import models.Student
 
 class IntentsActivity : AppCompatActivity() {
 
@@ -43,6 +44,10 @@ class IntentsActivity : AppCompatActivity() {
 
     private fun goIntentObject(){
         val intent = Intent(this, IntentExtrasActivity::class.java)
+        //Se llama el Student, este recibe un parcel o los parametros que hemos creado.
+        val student = Student("Alejandro", "Gonzalez", 21, false)
+        //Este putExtra es el key.
+        intent.putExtra("student", student)
         startActivity(intent)
     }
 }
