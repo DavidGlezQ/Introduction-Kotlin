@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_intent_extras.*
 import kotlinx.android.synthetic.main.list_view_person.textViewName
@@ -11,9 +12,19 @@ import models.Student
 
 class IntentExtrasActivity : AppCompatActivity() {
 
+    //Configuracion del toolbar.
+    private lateinit var toolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_extras)
+
+        //Configuracion del toolbar.
+        setSupportActionBar(findViewById(R.id.toolbar))
+        //Up Navigation
+        //Esta up Navigation se coloca en el toolbar y una parte se configura desde el Manifest donde se una un meta-dat y un value, esto declara que al pulsarlo nos mandara a un activity en especifico, en este caso el MainActivity.
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         //Evento para boton regresar en una sola linea.
         btn_back.setOnClickListener { startActivity(Intent(this, IntentsActivity::class.java)) }
 

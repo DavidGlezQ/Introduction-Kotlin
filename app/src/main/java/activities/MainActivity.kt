@@ -1,54 +1,45 @@
 package activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.kotlinseccion4.R
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    //Configuracion del toolbar.
+    private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Se declara la variable junto con findviewbyid <aqui va el objeto que se utiliza en este caso es un boton> y al igual que en java se busca el objeto en R.
-        val btnCycleEvents = findViewById<Button>(R.id.btn_to_cycle)
-        val btnCLickEvents = findViewById<Button>(R.id.btn_to_click)
-        val btnAndroidKotlinExtension = findViewById<Button>(R.id.btn_to_android_extension)
-        val btnPicasso = findViewById<Button>(R.id.btn_to_picasso)
-        val btnListView = findViewById<Button>(R.id.btn_to_ListView)
-        val btnIntents = findViewById<Button>(R.id.btn_to_intents)
-        val btnPermission = findViewById<Button>(R.id.btn_to_permission)
-        val btnSharedPreferences = findViewById<Button>(R.id.btn_to_shared_preferences)
-        val btnExtensionFunctions = findViewById<Button>(R.id.btn_to_functions)
+        //Para crear un toolbar se debe de crear un layout con los parametros adecuados (tamaños etc).
+        //Se debe de quitar el ActionBar del Manifest y aplicar un NoActionBar, asi quitaremos el ActionBar que genera android por defecto.
+        //Una vez creada se incluye en el activity principal esto se hace por separado ya que es mas limpio, ademas que si en alguna parte de la app no requerimos de esta toolbar simplementado no se incluye y listo.
+        //Por ultimo se pone esta linea para agregarla al soporte del ActionBar junto con su id.
+        setSupportActionBar(findViewById(R.id.toolbar))
 
-        //Evento onClickListener en una sola linea con kotlin. Manda a llamar la funcion que manda de un activy a otro.
-        btnCycleEvents.setOnClickListener{ goToCycleEventActivity() }
-        btnCLickEvents.setOnClickListener{ goToClickEventsActivity() }
-        btnAndroidKotlinExtension.setOnClickListener{ goToAndroidKotlinExtension() }
-        btnPicasso.setOnClickListener { goToPicasso() }
-        btnListView.setOnClickListener { goToListView() }
-        btnIntents.setOnClickListener { goToIntents() }
-        btnPermission.setOnClickListener { goToPermission() }
-        btnSharedPreferences.setOnClickListener { goToSharedPreferences() }
-        btnExtensionFunctions.setOnClickListener { goToExtensionFunctions() }
+        btn_to_cycle.setOnClickListener { startActivity(Intent(this, CycleEventsActivity::class.java)) }
+        btn_to_click.setOnClickListener { startActivity(Intent(this, CLickEventsActivity::class.java)) }
+        btn_to_android_extension.setOnClickListener { startActivity(Intent(this, AndroidKotlinExtensionActivity::class.java)) }
+        btn_to_picasso.setOnClickListener { startActivity(Intent(this, PicassoActivity::class.java)) }
+        btn_to_ListView.setOnClickListener { startActivity(Intent(this, ListViewActivity::class.java)) }
+        btn_to_intents.setOnClickListener { startActivity(Intent(this, IntentsActivity::class.java)) }
+        btn_to_permission.setOnClickListener { startActivity(Intent(this, PermissionActivity::class.java)) }
+        btn_to_shared_preferences.setOnClickListener { startActivity(Intent(this, SharedPreferencesActivity::class.java)) }
+        btn_to_functions.setOnClickListener { startActivity(Intent(this, ExtensionFunctionsActivity::class.java)) }
+
     }
-
-    //Funcion que manda a llamar a la clase del activity, no es necesario el startActivity.
-    private fun goToCycleEventActivity() = startActivity(Intent(this, CycleEventsActivity::class.java))
-    private fun goToClickEventsActivity() = startActivity(Intent(this, CLickEventsActivity::class.java))
-    private fun goToAndroidKotlinExtension() = startActivity(Intent(this, AndroidKotlinExtensionActivity::class.java))
-    private fun goToPicasso() = startActivity(Intent(this, PicassoActivity::class.java))
-    private fun goToListView() = startActivity(Intent(this, ListViewActivity::class.java))
-    private fun goToIntents() = startActivity(Intent(this, IntentsActivity::class.java))
-    private fun goToPermission() = startActivity(Intent(this, PermissionActivity::class.java))
-    private fun goToSharedPreferences() = startActivity(Intent(this, SharedPreferencesActivity::class.java))
-    private fun goToExtensionFunctions() = startActivity(Intent(this, ExtensionFunctionsActivity::class.java))
-
+    
     //Otas funciones
         fun showToast() {
             //Toast es igual que en java.
