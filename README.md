@@ -15,6 +15,11 @@
  Ultima actualizacion 27/04/2020
  Intents terminados
  
+ Ultima actualizacion 29/04/2020
+ Se agrega un toolbar personalizado en el activity principal y en los IntentActiviy.
+ Se agrega el UpNavigation en la parte de los Intents.
+ Se agregan las AndroidKotlinExtension en los eventos de los botones para hacer el codigo mas limpio.
+ 
  Temas por terminar:
  -Permission
  -Shared Preferences
