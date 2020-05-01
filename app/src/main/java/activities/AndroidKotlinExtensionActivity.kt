@@ -4,14 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_android_kotlin_extension.*
 
 class AndroidKotlinExtensionActivity : AppCompatActivity() {
 
+    //Configuraion toolbar
+    private lateinit var toolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_android_kotlin_extension)
+
+        //Configuracion toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         //De esta manera que castea el boton u objeto de la UI haciendo el codigo un poco mas largo pero funcional
         val btn = findViewById<Button>(R.id.buttonById)

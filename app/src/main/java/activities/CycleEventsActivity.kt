@@ -1,16 +1,23 @@
 package activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
+import others.LifeCycleEventsActivity
 
 class CycleEventsActivity : LifeCycleEventsActivity() {
+
     private var ExitEnable = false
+    //Configuracion del toolbar.
+    private lateinit var toolbar: Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cycle_events)
+
+        setSupportActionBar(findViewById(R.id.toolbar))
     }
 
     /*Este metodo onBackPressed es el que hace que funcione el boton fisico del telefono es decir que si sobreescribimos este metodo y quitamos

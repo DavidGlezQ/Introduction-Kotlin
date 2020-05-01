@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context="activities.IntentsActivity">
 
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <Button
         android:id="@+id/btn_extra"
         android:layout_width="0dp"
@@ -16,7 +19,7 @@
         android:text="@string/btn_intent_extra"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <Button
         android:id="@+id/btn_flags"

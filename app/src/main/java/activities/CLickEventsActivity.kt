@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 
 class CLickEventsActivity : AppCompatActivity(), View.OnLongClickListener {
+
+    //Configuracion toolbar
+    private lateinit var toolbar: Toolbar
 
     // 1)Click in XML
     // 2)Click in line
@@ -16,6 +20,10 @@ class CLickEventsActivity : AppCompatActivity(), View.OnLongClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_c_lick_events)
+
+        //Configuracion toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
+
         ClickInLine()
 
         //Para que se pueda utilizar los botones multi se deben de declarar pasandole el metodo

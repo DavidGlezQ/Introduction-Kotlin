@@ -3,16 +3,21 @@ package activities
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_picasso.*
+import others.CircleTransform
 
 class PicassoActivity : AppCompatActivity() {
-
+    //Configuracion toolbar
+    private lateinit var toolbar: Toolbar
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picasso)
+        //Toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         //Id del boton para cargar las imagenes mandando a llamar al medoto de picasso y aplicando KAT
         buttonLoader.setOnClickListener { loadImages() }

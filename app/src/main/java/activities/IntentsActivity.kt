@@ -3,15 +3,20 @@ package activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_intents.*
 import models.Student
 
 class IntentsActivity : AppCompatActivity() {
+    //Toolbar
+    private lateinit var toolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intents)
+        //Toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
 
         btn_extra.setOnClickListener { goIntentExtra() }
         btn_flags.setOnClickListener { goIntentFlags() }

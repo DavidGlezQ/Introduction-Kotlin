@@ -1,13 +1,10 @@
 package activities
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import android.widget.Toolbar
-import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.kotlinseccion4.R
 import com.google.android.material.snackbar.Snackbar
@@ -21,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         //Para crear un toolbar se debe de crear un layout con los parametros adecuados (tamaños etc).
         //Se debe de quitar el ActionBar del Manifest y aplicar un NoActionBar, asi quitaremos el ActionBar que genera android por defecto.

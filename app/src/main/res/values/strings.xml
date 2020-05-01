@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Section4Kotlin</string>
+    <string name="app_name">Section 4 Kotlin</string>
     <string name="btn_to_cycle">1.-To Life Cycle Events</string>
     <string name="btn_to_click">2.-To Click Events</string>
     <string name="btn_to_android_extension">3.-To Android Kotlin Extension</string>
@@ -20,4 +20,8 @@
     <string name="btn_intent_flags">Intent with lags</string>
     <string name="btn_intent_objects">Intent with Objects</string>
     <string name="btn_back">Go Back</string>
+    <string name="btn_take_picture">Take a Picture</string>
+    <string name="btn_save">Save Shared Preferences</string>
+    <string name="textNamePreferences">Type your Name</string>
+    <string name="textAgePreferences">Type your Age</string>
 </resources>

@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kotlinseccion4">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
+        android:name="app.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,9 +16,9 @@
         <activity android:name="activities.IntentExtrasActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="activities.MainActivity"/>
+                android:value="activities.MainActivity" />
         </activity>
-        <activity android:name="activities.LifeCycleEventsActivity" />
+        <activity android:name="others.LifeCycleEventsActivity" />
         <activity android:name="activities.ExtensionFunctionsActivity" />
         <activity android:name="activities.AndroidKotlinExtensionActivity" />
         <activity android:name="activities.CLickEventsActivity" />

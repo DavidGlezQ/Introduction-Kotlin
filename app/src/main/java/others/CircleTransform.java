@@ -1,4 +1,4 @@
-package activities;
+package others;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

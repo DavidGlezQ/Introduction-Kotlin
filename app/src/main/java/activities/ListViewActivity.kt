@@ -3,11 +3,14 @@ package activities
 import adapter.PersonAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.kotlinseccion4.R
 import kotlinx.android.synthetic.main.activity_list_view.*
 import models.Person
 
 class ListViewActivity : AppCompatActivity() {
+    //Toolbar
+    private lateinit var toolbar: Toolbar
     //Una buena practica es guardar las referencias
     private lateinit var adapter: PersonAdapter
     private lateinit var personList: List<Person>
@@ -15,7 +18,8 @@ class ListViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_view)
-
+        //Toolbar
+        setSupportActionBar(findViewById(R.id.toolbar))
         personList = getPerson()//Conseguimos las personas de la lista
         adapter = PersonAdapter(this, R.layout.list_view_person, getPerson())//Creamos el adaptador
         ListView.adapter = adapter
