@@ -20,7 +20,10 @@
  Se agrega el UpNavigation en la parte de los Intents.
  Se agregan las AndroidKotlinExtension en los eventos de los botones para hacer el codigo mas limpio.
  
+ Ultima actualizacion 30/04/2020
+ Se agregan las toolbar a todos los activities.
+ Se agrega codigo en las preferencias, este codigo es para hacer el uso de la cámara sin permisos.
+ Se agregan las Shared Preferences para hacer uso con un nombre, edad y posteriormente mostralas en un TextView.
+ 
  Temas por terminar:
- -Permission
- -Shared Preferences
  -Extension Functions
