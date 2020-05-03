@@ -25,5 +25,12 @@
  Se agrega codigo en las preferencias, este codigo es para hacer el uso de la cámara sin permisos.
  Se agregan las Shared Preferences para hacer uso con un nombre, edad y posteriormente mostralas en un TextView.
  
- Temas por terminar:
- -Extension Functions
+ Ultima actualizacion 02/05/2020
+ Se agregan mas extension fucntion al ultimo boton de la app.
+ Se agrega un archivo el cual contiene estas extension function llamado, ExtensionFunction.
+ Se agregan extensionFunction para Toast.
+ Se agregan extensionFunction para SnackBar.
+ Se agregan extensionFunction para cargar una imagen desde una URL.
+ Se agregan extensionFunction con intent para ir al MainActivity.
+ 
+ --Seccion 4 del curso Kotlin + FireBase + Google, TERMINADA--
