@@ -43,21 +43,21 @@ class CLickEventsActivity : AppCompatActivity(), View.OnLongClickListener {
     //3.-Recibe un solo parametro y es un view
     //De esta manera si vamos al XML podremos importar el evento onClick directamente.
     fun XMLClick(view: View){
-        Toast.makeText(this, "Click by XML", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Click by XML", Toast.LENGTH_SHORT).show()
     }
 
     //Logica para el boton Click in Line
     private fun ClickInLine(){
         val btnClickInLine = findViewById<Button>(R.id.buttonClickInLine)
-        btnClickInLine.setOnClickListener { Toast.makeText(this, "Click in Line", Toast.LENGTH_LONG).show() }
+        btnClickInLine.setOnClickListener { Toast.makeText(this, "Click in Line", Toast.LENGTH_SHORT).show() }
     }
 
     //Logica para los botones multi con LongClick utilizando un when
     override fun onLongClick(view: View): Boolean {
         when(view.id){
-            R.id.buttonMulti1 -> Toast.makeText(this, "Click in multi1", Toast.LENGTH_LONG).show()
-            R.id.buttonMulti2 -> Toast.makeText(this, "Click in multi2", Toast.LENGTH_LONG).show()
-            R.id.buttonMulti3 -> Toast.makeText(this, "Click in multi3", Toast.LENGTH_LONG).show()
+            R.id.buttonMulti1 -> Toast.makeText(this, "Click in multi1", Toast.LENGTH_SHORT).show()
+            R.id.buttonMulti2 -> Toast.makeText(this, "Click in multi2", Toast.LENGTH_SHORT).show()
+            R.id.buttonMulti3 -> Toast.makeText(this, "Click in multi3", Toast.LENGTH_SHORT).show()
         }
         return true
     }

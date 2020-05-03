@@ -22,6 +22,10 @@
     <string name="btn_back">Go Back</string>
     <string name="btn_take_picture">Take a Picture</string>
     <string name="btn_save">Save Shared Preferences</string>
+    <string name="btn_EF_Toast">Extension Function Toast</string>
+    <string name="btn_EF_SnackBar">Extension Function Snack Bar</string>
+    <string name="btn_EF_LoadByURL">Extension Function Load By URL</string>
+    <string name="btn_EF_GoToActivity">Extension Function Go To Activity</string>
     <string name="textNamePreferences">Type your Name</string>
     <string name="textAgePreferences">Type your Age</string>
 </resources>

@@ -8,10 +8,9 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import kotlinx.android.synthetic.main.list_view_person.view.*
 import models.Person
+import others.inflate
 
 class PersonAdapter(val context: Context, val layout: Int, val list: List<Person>): BaseAdapter(){
-
-    private val mInflator: LayoutInflater = LayoutInflater.from(context)
 
     override fun getItem(position: Int): Any {
         //Este metodo lo que hace resvir la posicion de la lista, en forma ordenada
@@ -35,7 +34,7 @@ class PersonAdapter(val context: Context, val layout: Int, val list: List<Person
 
         if (convertView == null){
             //Se infla la vista
-            view = mInflator.inflate(layout, parent, false)
+            view = parent.inflate(layout)
             //Ese view es el view inflado con el layout y que pasa como referencia los dos textview con el nomnbre y el año.
             vh = PersonViewHolder(view)
             view.tag = vh
